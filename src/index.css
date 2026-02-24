@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --color-beer-yellow: #FFD700;
+  --color-beer-neon: #F0E68C;
+  --color-wood-dark: #1A0F0A;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", serif;
+}
+
+@layer base {
+  body {
+    @apply bg-[#1A0F0A] text-white font-sans;
+    background-image: url('https://images.unsplash.com/photo-1513161455079-7dc1de15ef3e?q=80&w=1974&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  body::before {
+    content: "";
+    @apply fixed inset-0 bg-black/70 z-[-1];
+  }
+}
+
+.neon-text {
+  text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 20px #FFD700;
+}
+
+.neon-border {
+  box-shadow: 0 0 5px #FFD700, inset 0 0 5px #FFD700;
+  border: 1px solid #FFD700;
+}
+
+.wood-panel {
+  background: linear-gradient(rgba(26, 15, 10, 0.9), rgba(26, 15, 10, 0.95)), url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+}
